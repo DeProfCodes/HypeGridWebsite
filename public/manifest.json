@@ -1,0 +1,12 @@
+{
+  "name": "HypeGrid",
+  "short_name": "HypeGrid",
+  "description": "Creative marketing, influencer, and digital promotion network.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020512",
+  "theme_color": "#020512",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
