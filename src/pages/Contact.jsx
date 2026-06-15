@@ -12,6 +12,7 @@ import GridBackground from '@/components/layout/GridBackground';
 import SectionHeading from '@/components/ui/SectionHeading';
 import GlassCard from '@/components/ui/GlassCard';
 import FormSuccess from '@/components/forms/FormSuccess';
+import { SocialLinks } from '@/components/ui/SocialIcons';
 import { publicApi } from '@/api/publicApi';
 import { usePublicForm } from '@/hooks/usePublicForm';
 
@@ -203,6 +204,15 @@ export default function Contact() {
               </motion.form>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Follow HypeGrid — deliberate, colourful social section */}
+      <section className="pb-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="font-mono text-xs tracking-[0.2em] text-hype-cyan uppercase mb-3">Follow HypeGrid</p>
+          <h3 className="font-heading text-xl md:text-2xl font-bold text-white mb-6">Stay on the grid</h3>
+          <SocialLinks variant="color" size={22} className="justify-center" />
         </div>
       </section>
     </PageLayout>

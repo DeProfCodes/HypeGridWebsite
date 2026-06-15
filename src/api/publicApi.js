@@ -101,4 +101,33 @@ export const publicApi = {
     };
     return unwrapResult(await httpClient.post('/api/public/newsletter/subscribe', payload));
   },
+
+  // ── HypeGrid Alerts / Deals Club (consent-based opt-in) ──────────────────
+  // Returns { id, whatsapp_channel_url } on success.
+  async subscribeAlerts(form) {
+    const payload = {
+      full_name: form.fullName || null,
+      email: form.email || null,
+      phone: form.phone || null,
+      city: form.city || null,
+      province: form.province || null,
+      interests: Array.isArray(form.interests) ? form.interests : [],
+      frequency_preference: form.frequencyPreference || null,
+      source_page: form.sourcePage || 'alerts',
+      consent: form.consent === true,
+      consent_version: form.consentVersion || null,
+      consent_snapshot: form.consentSnapshot || null,
+    };
+    return unwrapResult(await httpClient.post('/api/public/alerts/subscribe', payload));
+  },
+
+  // Records that the subscriber tapped the WhatsApp Channel CTA. Returns
+  // { whatsapp_channel_url }. Never throws — the UI must still open the channel.
+  async markAlertChannelClick(id) {
+    try {
+      return unwrapResult(await httpClient.post(`/api/public/alerts/${id}/channel-click`, {}));
+    } catch {
+      return null;
+    }
+  },
 };

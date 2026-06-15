@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import BrandLogo from '@/components/brand/BrandLogo';
+import { SocialLinks } from '@/components/ui/SocialIcons';
 
 const quickLinks = [
   { label: 'Home', path: '/' },
@@ -68,32 +70,13 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <Link to="/" className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-hype-green to-hype-cyan flex items-center justify-center">
-                  <div className="w-4 h-4 grid grid-cols-2 gap-0.5">
-                    <div className="bg-hype-navy rounded-[1px]" />
-                    <div className="bg-hype-navy rounded-[1px]" />
-                    <div className="bg-hype-navy rounded-[1px]" />
-                    <div className="bg-hype-navy rounded-[1px]" />
-                  </div>
-                </div>
-                <span className="font-heading font-bold text-lg text-white">
-                  Hype<span className="text-hype-green">Grid</span>
-                </span>
+              <Link to="/" className="flex items-center mb-4">
+                <BrandLogo className="w-[150px] h-auto" />
               </Link>
               <p className="text-hype-slate text-sm leading-relaxed mb-6">
                 HypeGrid helps brands, artists, creators, and businesses get seen through content, creators, campaigns, and digital strategy.
               </p>
-              <div className="flex gap-3">
-                {['TikTok', 'IG', 'FB', 'YT'].map((platform) => (
-                  <div
-                    key={platform}
-                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-hype-slate text-xs font-mono hover:bg-hype-green/10 hover:text-hype-green hover:border-hype-green/30 transition-all cursor-pointer"
-                  >
-                    {platform}
-                  </div>
-                ))}
-              </div>
+              <SocialLinks variant="footer" size={18} />
             </div>
 
             {/* Quick Links */}

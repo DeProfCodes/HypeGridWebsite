@@ -11,6 +11,7 @@ import Campaigns from '@/pages/Campaigns';
 import Creators from '@/pages/Creators';
 import Packages from '@/pages/Packages';
 import Deals from '@/pages/Deals';
+import Alerts from '@/pages/Alerts';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/creators" element={<Creators />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/deals" element={<Deals />} />
+          <Route path="/alerts" element={<Alerts />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />

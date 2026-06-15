@@ -4,6 +4,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Input } from '@/components/ui/input';
 import DealCard from '@/components/deals/DealCard';
+import DealsClubCta from '@/components/home/DealsClubCta';
 import { usePublicContentStore } from '@/stores/publicContentStore';
 import { dealCategories } from '@/data/mock/deals.mock';
 import { trackImpressionOnce } from '@/lib/analytics';
@@ -76,6 +77,8 @@ export default function Deals() {
             </div>
           )}
         </div>
+
+        <DealsClubCta />
       </section>
     </PageLayout>
   );

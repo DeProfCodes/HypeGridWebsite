@@ -3,6 +3,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import HeroCarousel from '@/components/home/HeroCarousel';
 import FeaturedVideoSection from '@/components/home/FeaturedVideoSection';
 import LatestDeals from '@/components/home/LatestDeals';
+import DealsClubCta from '@/components/home/DealsClubCta';
 import WhatWePromote from '@/components/home/WhatWePromote';
 import HypeGridEffect from '@/components/home/HypeGridEffect';
 import ServicesPreview from '@/components/home/ServicesPreview';
@@ -20,6 +21,7 @@ export default function Home() {
       <HeroCarousel />
       <FeaturedVideoSection />
       <LatestDeals />
+      <DealsClubCta />
 
       {/* Agency explanation + offering (moved below the platform content) */}
       <WhatWePromote />

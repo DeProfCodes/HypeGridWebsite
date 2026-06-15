@@ -37,12 +37,15 @@ export const usePublicContentStore = createMockBackedStore({
       fallbackToMock: true,
     },
     heroPlacements: {
-      initial: heroPlacementsMock,
+      // Start empty so the homepage immediately shows the built-in default
+      // advertising hero (DefaultHero) until/unless live placements load.
+      initial: [],
       mock: async () => heroPlacementsMock,
+      // Live items as-is: an EMPTY array stays empty so HeroCarousel renders the
+      // default HypeGrid hero. A network FAILURE still falls back to mock below.
       api: async () => {
         const items = await publicApi.getHeroPlacements();
-        // Empty live result → fall back to mock so the hero is never blank.
-        return Array.isArray(items) && items.length ? items : heroPlacementsMock;
+        return Array.isArray(items) ? items : [];
       },
       fallbackToMock: true,
     },

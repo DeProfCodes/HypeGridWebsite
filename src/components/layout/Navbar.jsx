@@ -3,10 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import BrandLogo from '@/components/brand/BrandLogo';
 
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Deals', path: '/deals' },
+  { label: 'Deals Club', path: '/alerts' },
   { label: 'Services', path: '/services' },
   { label: 'Campaigns', path: '/campaigns' },
   { label: 'Creator Network', path: '/creators' },
@@ -41,18 +43,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-hype-green to-hype-cyan flex items-center justify-center">
-              <div className="w-4 h-4 grid grid-cols-2 gap-0.5">
-                <div className="bg-hype-navy rounded-[1px]" />
-                <div className="bg-hype-navy rounded-[1px]" />
-                <div className="bg-hype-navy rounded-[1px]" />
-                <div className="bg-hype-navy rounded-[1px]" />
-              </div>
-            </div>
-            <span className="font-heading font-bold text-lg text-white tracking-tight">
-              Hype<span className="text-hype-green">Grid</span>
-            </span>
+          <Link to="/" className="flex items-center group">
+            <BrandLogo className="w-[120px] sm:w-[150px] h-auto" />
           </Link>
 
           {/* Desktop Nav */}

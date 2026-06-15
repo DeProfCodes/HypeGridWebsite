@@ -22,12 +22,17 @@ export default function DealCard({ deal, index = 0 }) {
       transition={{ delay: (index % 6) * 0.05, duration: 0.4 }}
       className="group h-full flex flex-col rounded-xl overflow-hidden border border-white/8 bg-white/[0.02] hover:border-hype-cyan/30 transition-all duration-300"
     >
-      {/* Media */}
-      <div className="relative h-40 overflow-hidden">
-        {deal.image_url ? (
-          <img src={deal.image_url} alt="" className="w-full h-full object-cover" />
-        ) : (
-          <div className="w-full h-full" style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.12), rgba(191,255,0,0.10))' }} />
+      {/* Media — branded gradient is the base so a missing/broken image never
+          leaves a blank box; the image (if any) sits on top and hides on error. */}
+      <div className="relative h-40 overflow-hidden" style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.12), rgba(191,255,0,0.10))' }}>
+        {deal.image_url && (
+          <img
+            src={deal.image_url}
+            alt={[deal.brand_name, deal.title].filter(Boolean).join(' — ') || 'Deal image'}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          />
         )}
         <div className="absolute top-3 left-3 flex gap-2">
           {deal.discount_label && (

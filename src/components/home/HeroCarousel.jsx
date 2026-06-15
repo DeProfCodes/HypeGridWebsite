@@ -5,6 +5,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { usePublicContentStore } from '@/stores/publicContentStore';
 import { track, trackImpressionOnce } from '@/lib/analytics';
+import DefaultHero from '@/components/home/DefaultHero';
 
 const AUTOPLAY_MS = 6000;
 
@@ -68,7 +69,9 @@ export default function HeroCarousel() {
     }
   }, [active]);
 
-  if (!slides.length) return null;
+  // No active/in-date placements (empty API result, or a failure with no mock
+  // fallback) → show the built-in HypeGrid advertising hero, never a blank space.
+  if (!slides.length) return <DefaultHero />;
 
   const go = (dir) => setIndex((i) => (i + dir + slides.length) % slides.length);
   const img = isMobile ? (active.mobile_image_url || active.desktop_image_url) : active.desktop_image_url;
