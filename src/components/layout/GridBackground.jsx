@@ -14,7 +14,7 @@ export default function GridBackground({ children, className = '' }) {
       />
       <div 
         className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full opacity-[0.05]"
-        style={{ background: 'radial-gradient(circle, #BFFF00 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #39FF14 0%, transparent 70%)' }}
         aria-hidden="true"
       />
       

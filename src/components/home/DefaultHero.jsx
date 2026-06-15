@@ -38,7 +38,7 @@ export default function DefaultHero() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-[0.10]"
           style={{ background: 'radial-gradient(circle, #00F2FF 0%, transparent 60%)' }} />
         <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] rounded-full opacity-[0.07]"
-          style={{ background: 'radial-gradient(circle, #BFFF00 0%, transparent 60%)' }} />
+          style={{ background: 'radial-gradient(circle, #39FF14 0%, transparent 60%)' }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">

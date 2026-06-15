@@ -35,7 +35,7 @@ export default function HeroSection() {
           style={{ background: 'radial-gradient(circle, #00F2FF 0%, transparent 60%)' }}
         />
         <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] rounded-full opacity-[0.06]"
-          style={{ background: 'radial-gradient(circle, #BFFF00 0%, transparent 60%)' }}
+          style={{ background: 'radial-gradient(circle, #39FF14 0%, transparent 60%)' }}
         />
       </div>
 

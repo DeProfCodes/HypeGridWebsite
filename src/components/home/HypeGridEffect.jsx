@@ -40,7 +40,7 @@ export default function HypeGridEffect() {
       <div 
         className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: 'linear-gradient(rgba(191, 255, 0, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(191, 255, 0, 1) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(57, 255, 20, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(57, 255, 20, 1) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
         aria-hidden="true"

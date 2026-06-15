@@ -15,7 +15,7 @@ function DealPlaceholderCard() {
       onClick={() => track('cta_click', { entityType: 'Other', entityId: 'deal-placeholder' })}
       className="group h-full flex flex-col rounded-xl overflow-hidden border border-dashed border-hype-cyan/25 bg-white/[0.02] hover:border-hype-cyan/50 transition-all duration-300"
     >
-      <div className="h-40 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.08), rgba(191,255,0,0.06))' }}>
+      <div className="h-40 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.08), rgba(57, 255, 20,0.06))' }}>
         <Sparkles className="w-8 h-8 text-hype-cyan/70" />
       </div>
       <div className="p-5 flex flex-col flex-1">

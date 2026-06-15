@@ -5,13 +5,26 @@ import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import BrandLogo from '@/components/brand/BrandLogo';
 
+// Lean desktop nav — the most important destinations only, so the header stays
+// premium and never wraps. Secondary pages (Services, Packages, About) remain
+// reachable from the footer and the mobile menu below.
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Deals', path: '/deals' },
-  { label: 'Deals Club', path: '/alerts' },
-  { label: 'Services', path: '/services' },
-  { label: 'Campaigns', path: '/campaigns' },
+  { label: 'Advertise', path: '/campaigns' },
+  { label: 'Creators', path: '/creators' },
+  { label: 'Alerts', path: '/alerts' },
+  { label: 'Contact', path: '/contact' },
+];
+
+// Mobile can carry more — keep every useful page accessible here.
+const mobileLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'Deals', path: '/deals' },
+  { label: 'Advertise', path: '/campaigns' },
   { label: 'Creator Network', path: '/creators' },
+  { label: 'Alerts', path: '/alerts' },
+  { label: 'Services', path: '/services' },
   { label: 'Packages', path: '/packages' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
@@ -48,7 +61,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -64,16 +77,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link to="/creators">
-              <Button
-                variant="ghost"
-                className="text-hype-green border border-hype-green/20 hover:bg-hype-green/10 hover:text-hype-green text-sm"
-              >
-                Join Creators
-              </Button>
-            </Link>
+          {/* Desktop CTA — one clean primary action only */}
+          <div className="hidden lg:flex items-center">
             <Link to="/campaigns">
               <Button className="bg-hype-cyan text-hype-navy hover:bg-hype-cyan/90 font-semibold text-sm glow-cyan">
                 <Zap className="w-4 h-4 mr-1" />
@@ -103,7 +108,7 @@ export default function Navbar() {
             className="lg:hidden bg-hype-navy/95 backdrop-blur-xl border-t border-white/5"
           >
             <div className="px-4 py-6 space-y-1">
-              {navLinks.map((link) => (
+              {mobileLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}

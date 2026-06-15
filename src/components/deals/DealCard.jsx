@@ -24,7 +24,7 @@ export default function DealCard({ deal, index = 0 }) {
     >
       {/* Media — branded gradient is the base so a missing/broken image never
           leaves a blank box; the image (if any) sits on top and hides on error. */}
-      <div className="relative h-40 overflow-hidden" style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.12), rgba(191,255,0,0.10))' }}>
+      <div className="relative h-40 overflow-hidden" style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.12), rgba(57, 255, 20,0.10))' }}>
         {deal.image_url && (
           <img
             src={deal.image_url}

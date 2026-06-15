@@ -14,7 +14,7 @@ module.exports = {
   			foreground: 'hsl(var(--foreground))',
   			hype: {
   				navy: '#050816',
-  				green: '#BFFF00',
+  				green: '#39FF14',
   				cyan: '#00F2FF',
   				slate: '#94A3B8',
   				dark: '#0A0F28',

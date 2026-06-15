@@ -10,13 +10,13 @@ export default function CreatorPreview() {
       <div 
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'linear-gradient(rgba(191, 255, 0, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(191, 255, 0, 0.5) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(57, 255, 20, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(57, 255, 20, 0.5) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
         }}
         aria-hidden="true"
       />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-[0.06]"
-        style={{ background: 'radial-gradient(circle, #BFFF00 0%, transparent 60%)' }}
+        style={{ background: 'radial-gradient(circle, #39FF14 0%, transparent 60%)' }}
         aria-hidden="true"
       />
 
